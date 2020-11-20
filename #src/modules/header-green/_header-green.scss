@@ -1,0 +1,15 @@
+.header--green {
+  .header__container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #71b220;
+  }
+
+  .header__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 144px;
+    color: transparent;
+    -webkit-text-stroke: 3px #2a2a2a;
+  }
+}
