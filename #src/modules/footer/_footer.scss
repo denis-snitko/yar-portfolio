@@ -1,2 +1,27 @@
 .footer {
+  &__container {
+    @include row-flex();
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #2a2a2a;
+    background-image: url("../img/svg/lines.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__logo {
+    img {
+      width: 82px;
+      height: 60px;
+    }
+  }
+
+  &__second-logo {
+    img {
+      width: 90px;
+      height: 102px;
+    }
+  }
 }

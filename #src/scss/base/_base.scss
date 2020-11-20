@@ -55,3 +55,54 @@
     }
   }
 }
+
+.contacts {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    position: relative;
+    padding: 0 50px;
+    color: inherit;
+    transition: $base-transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      color: #71b220;
+    }
+
+    &--web::before {
+      content: url("../img/svg/web.svg");
+    }
+
+    &--mail::before {
+      content: url("../img/svg/mail.svg");
+    }
+
+    &--skype::before {
+      content: url("../img/svg/skype.svg");
+    }
+
+    &--telegram::before {
+      content: url("../img/svg/telegram.svg");
+    }
+  }
+}
