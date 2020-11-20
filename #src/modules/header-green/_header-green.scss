@@ -1,8 +1,14 @@
 .header--green {
+  background-color: #71b220;
+
   .header__container {
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #71b220;
+
+    @include xs-block() {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   .header__title {
@@ -11,5 +17,48 @@
     font-size: 144px;
     color: transparent;
     -webkit-text-stroke: 3px #2a2a2a;
+
+    @include xl-block() {
+      font-size: 90px;
+    }
+
+    @include sm-block() {
+      font-size: 70px;
+      -webkit-text-stroke: 1px #2a2a2a;
+    }
+
+    @include xs-block() {
+      margin-left: 24px;
+      font-size: 36px;
+    }
+  }
+  &__logo {
+    @include xl-block() {
+      img {
+        width: 145px;
+      }
+    }
+
+    @include sm-block() {
+      img {
+        width: 100px;
+      }
+    }
+
+    @include xs-block() {
+      img {
+        width: 55px;
+      }
+    }
+  }
+  &__second-logo {
+    @include xl-block() {
+      img {
+        width: 150px;
+      }
+    }
+    @include md-block() {
+      display: none;
+    }
   }
 }

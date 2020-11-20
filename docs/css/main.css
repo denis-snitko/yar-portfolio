@@ -1070,6 +1070,7 @@ body {
 .contacts__link {
   position: relative;
   padding: 0 50px;
+  white-space: nowrap;
   color: inherit;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
@@ -1108,24 +1109,25 @@ body {
 
 /* MAIN STYLES */
 
-.header__container {
+.header {
+  background-color: #2a2a2a;
+  background-image: url("../img/svg/lines.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #2a2a2a;
-  background-image: url("../img/svg/lines.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .header__title {
@@ -1136,10 +1138,13 @@ body {
   -webkit-text-stroke: 3px #ffffff;
 }
 
+.header--green {
+  background-color: #71b220;
+}
+
 .header--green .header__container {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: #71b220;
 }
 
 .header--green .header__title {
@@ -1360,7 +1365,14 @@ body {
   bottom: 0;
 }
 
-.footer__container {
+.footer {
+  background-color: #2a2a2a;
+  background-image: url("../img/svg/lines.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1368,16 +1380,14 @@ body {
       flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #2a2a2a;
-  background-image: url("../img/svg/lines.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer__logo img {
@@ -1393,6 +1403,39 @@ body {
 /* END MAIN STYLES */
 
 @media screen and (max-width: 1200px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .header {
+    padding: 30px 0;
+  }
+
+  .header__title {
+    font-size: 90px;
+  }
+
+  .header__logo img {
+    width: 145px;
+  }
+
+  .header__second-logo img {
+    width: 150px;
+  }
+
+  .header--green .header__title {
+    font-size: 90px;
+  }
+
+  .header--green__logo img {
+    width: 145px;
+  }
+
+  .header--green__second-logo img {
+    width: 150px;
+  }
+
   .yellow-cards__col {
     width: calc(50% - 20px);
   }
@@ -1403,11 +1446,95 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .header__second-logo {
+    display: none;
+  }
+
+  .header--green__second-logo {
+    display: none;
+  }
+
   .yellow-cards__col {
     width: calc(100% - 20px);
   }
 
   .brown-cards__col {
     width: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .header__title {
+    font-size: 70px;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .header__logo img {
+    width: 100px;
+  }
+
+  .header--green .header__title {
+    font-size: 70px;
+    -webkit-text-stroke: 1px #2a2a2a;
+  }
+
+  .header--green__logo img {
+    width: 100px;
+  }
+
+  .yellow-cards {
+    padding: 30px 0;
+  }
+
+  .yellow-cards__col {
+    margin-bottom: 10px;
+  }
+
+  .yellow-cards__btn-wrap {
+    margin-top: 20px;
+  }
+
+  .brown-cards {
+    padding: 30px 0;
+  }
+
+  .brown-cards__col {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .header__title {
+    margin-left: 24px;
+    font-size: 36px;
+  }
+
+  .header__logo img {
+    width: 55px;
+  }
+
+  .header--green .header__container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header--green .header__title {
+    margin-left: 24px;
+    font-size: 36px;
+  }
+
+  .header--green__logo img {
+    width: 55px;
   }
 }

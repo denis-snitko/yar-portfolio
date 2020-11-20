@@ -11,6 +11,14 @@
 
 .container {
   @include container();
+  @include xl-block() {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @include sm-block() {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .base-btn {
@@ -74,6 +82,7 @@
   &__link {
     position: relative;
     padding: 0 50px;
+    white-space: nowrap;
     color: inherit;
     transition: $base-transition;
 
