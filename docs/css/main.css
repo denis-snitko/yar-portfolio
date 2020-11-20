@@ -1537,4 +1537,12 @@ body {
   .header--green__logo img {
     width: 55px;
   }
+
+  .yellow-card__title {
+    font-size: 16px;
+  }
+
+  .yellow-card__text {
+    font-size: 12px;
+  }
 }
