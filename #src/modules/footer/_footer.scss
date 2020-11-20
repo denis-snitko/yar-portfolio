@@ -4,12 +4,25 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include lg-block() {
+    padding: 20px;
+  }
+
+  @include md-block() {
+    padding-bottom: 0;
+  }
+
   &__wrap {
     @include row-flex();
 
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+
+    @include md-block() {
+      flex-wrap: wrap;
+      text-align: center;
+    }
   }
 
   &__logo {
@@ -17,12 +30,21 @@
       width: 82px;
       height: 60px;
     }
+
+    @include md-block() {
+      flex-grow: 1;
+      margin-bottom: 30px;
+    }
   }
 
   &__second-logo {
     img {
       width: 90px;
       height: 102px;
+    }
+
+    @include lg-block() {
+      display: none;
     }
   }
 }

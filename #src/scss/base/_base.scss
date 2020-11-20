@@ -74,9 +74,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include md-block() {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
+    @include md-block() {
+      width: 50%;
+      margin-bottom: 30px;
+      text-align: left;
+      // border: 1px solid #000;
+    }
   }
 
   &__link {
@@ -85,6 +95,10 @@
     white-space: nowrap;
     color: inherit;
     transition: $base-transition;
+
+    @include xs-block() {
+      font-size: 14px;
+    }
 
     &::before {
       content: "";
